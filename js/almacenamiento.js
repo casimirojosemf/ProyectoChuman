@@ -2,6 +2,9 @@ const CLAVES = {
   usuarios: "conectaLocal.usuarios",
   negocios: "conectaLocal.negocios",
   favoritos: "conectaLocal.favoritos",
+  resenas: "conectaLocal.resenas",
+  promociones: "conectaLocal.promociones",
+  historial: "conectaLocal.historial",
   sesion: "conectaLocal.sesion"
 };
 
@@ -30,6 +33,12 @@ export const obtenerNegocios = () => leer(CLAVES.negocios);
 export const guardarNegocios = (negocios) => guardar(CLAVES.negocios, negocios);
 export const obtenerFavoritos = () => leer(CLAVES.favoritos);
 export const guardarFavoritos = (favoritos) => guardar(CLAVES.favoritos, favoritos);
+export const obtenerResenas = () => leer(CLAVES.resenas);
+export const guardarResenas = (resenas) => guardar(CLAVES.resenas, resenas);
+export const obtenerPromociones = () => leer(CLAVES.promociones);
+export const guardarPromociones = (promociones) => guardar(CLAVES.promociones, promociones);
+export const obtenerHistorial = () => leer(CLAVES.historial);
+export const guardarHistorial = (historial) => guardar(CLAVES.historial, historial);
 export const obtenerSesion = () => leer(CLAVES.sesion, null);
 export const guardarSesion = (sesion) => guardar(CLAVES.sesion, sesion);
 export const limpiarSesion = () => localStorage.removeItem(CLAVES.sesion);
@@ -52,4 +61,15 @@ export function inicializarDemo() {
     ]);
   }
   if (!localStorage.getItem(CLAVES.favoritos)) guardarFavoritos([]);
+  else {
+    const favoritos = obtenerFavoritos();
+    if (favoritos.some((favorito) => typeof favorito === "string")) {
+      guardarFavoritos(favoritos.map((favorito) => typeof favorito === "string"
+        ? { usuarioId: "demo-cliente", negocioId: favorito }
+        : favorito));
+    }
+  }
+  if (!localStorage.getItem(CLAVES.resenas)) guardarResenas([]);
+  if (!localStorage.getItem(CLAVES.promociones)) guardarPromociones([]);
+  if (!localStorage.getItem(CLAVES.historial)) guardarHistorial([]);
 }

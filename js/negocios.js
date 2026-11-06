@@ -1,4 +1,8 @@
-import { obtenerNegocios, guardarNegocios } from "./almacenamiento.js";
+import {
+  obtenerNegocios, guardarNegocios, obtenerFavoritos, guardarFavoritos,
+  obtenerResenas, guardarResenas, obtenerPromociones, guardarPromociones,
+  obtenerHistorial, guardarHistorial
+} from "./almacenamiento.js";
 
 export const categorias = ["abarrotes", "restaurantes", "farmacias", "ferreterías", "librerías", "ropa", "otros"];
 
@@ -33,6 +37,10 @@ export function eliminarNegocio(id, propietarioId) {
   const restantes = negocios.filter((negocio) => !(negocio.id === id && negocio.propietarioId === propietarioId));
   if (restantes.length === negocios.length) throw new Error("No se encontró este negocio en tu panel.");
   guardarNegocios(restantes);
+  guardarFavoritos(obtenerFavoritos().filter((favorito) => favorito.negocioId !== id));
+  guardarResenas(obtenerResenas().filter((resena) => resena.negocioId !== id));
+  guardarPromociones(obtenerPromociones().filter((promocion) => promocion.negocioId !== id));
+  guardarHistorial(obtenerHistorial().filter((visita) => visita.negocioId !== id));
 }
 
 export const listarNegocios = () => obtenerNegocios();

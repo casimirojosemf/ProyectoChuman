@@ -116,3 +116,37 @@ h1,h2,h3,p { margin-top: 0; }
 .category-pills { display: flex; flex-wrap: wrap; gap: 12px; }
 .checkbox-row { display: flex; align-items: center; gap: 8px; color: #66758a; font-size: 13px; }
 .checkbox-row input { accent-color: var(--blue); }
+.client-sidebar .side-link:hover,.client-sidebar .side-link.active { background: #e9f8f2; color: #16835d; }
+.merchant-sidebar .side-link:hover,.merchant-sidebar .side-link.active { background: #edf3ff; color: var(--blue); }
+.merchant-stats { grid-template-columns: repeat(4,minmax(0,1fr)); }
+.rating-summary { display: flex; align-items: center; gap: 6px; margin: 8px 0 11px; color: var(--muted); font-size: 12px; }
+.rating-summary strong { color: var(--navy); font-size: 13px; }
+.stars { color: #e29b19; letter-spacing: 1px; white-space: nowrap; }
+.compare-card-button { white-space: nowrap; padding-inline: 8px; }
+.detail-section { margin-top: 30px; }
+.review-list,.promotion-list { display: grid; gap: 13px; }
+.review-card,.promotion-card,.comparison-card { background: white; border: 1px solid var(--line); border-radius: 15px; padding: 18px; }
+.review-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 14px; }
+.review-top strong,.review-business { display: block; }
+.review-business { margin-top: 4px; color: var(--blue); font-size: 13px; }
+.review-card p { margin: 14px 0 8px; color: #5f6f87; line-height: 1.65; }
+.review-date { display: block; font-size: 12px; margin-bottom: 12px; }
+.review-form-shell { margin: 25px 0 0; }
+.review-form-shell h2 { font: 700 19px Manrope,sans-serif; }
+.review-signin { margin-top: 22px; color: var(--muted); }
+.promotion-card { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.promotion-card h2 { margin: 9px 0 7px; font: 700 19px Manrope,sans-serif; }
+.promotion-card p { margin: 0 0 10px; color: #5f6f87; line-height: 1.6; }
+.promotion-card .card-actions { flex-shrink: 0; }
+.promotion-tag { display: inline-flex; color: #14744f; background: #e8f7ef; border-radius: 99px; padding: 5px 9px; font-size: 11px; font-weight: 700; }
+.compare-picker { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr) auto; align-items: end; gap: 13px; }
+.compare-picker .button { margin-bottom: 0; }
+.comparison-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 17px; margin-top: 22px; }
+.comparison-card h2 { margin: 0 0 8px; font: 700 20px Manrope,sans-serif; }
+.comparison-rating .rating-summary { margin: 0 0 14px; }
+.comparison-row { display: grid; gap: 5px; padding: 12px 0; border-top: 1px solid var(--line); font-size: 13px; }
+.comparison-row strong { color: #52647e; }
+.comparison-row span { color: var(--navy); line-height: 1.5; }
+.comparison-hint { margin-top: 20px; }
+.card-actions { flex-wrap: wrap; }
+.detail-content > .rating-summary { margin: 8px 0 13px; }

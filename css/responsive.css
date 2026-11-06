@@ -1,6 +1,7 @@
 @media (max-width: 1050px) {
   .business-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
   .filter-panel { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .merchant-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 760px) {
   .topbar { height: 64px; padding: 0 18px; }
@@ -22,6 +23,8 @@
   .stats-grid { gap: 10px; }
   .stat-card { padding: 15px; }
   .stat-card strong { font-size: 24px; }
+  .compare-picker { grid-template-columns: 1fr; }
+  .promotion-card { align-items: flex-start; flex-direction: column; }
 }
 @media (max-width: 560px) {
   .topbar-actions .button { min-height: 36px; padding: 8px 10px; font-size: 12px; }
@@ -32,6 +35,8 @@
   .page-heading { align-items: flex-start; flex-direction: column; }
   .page-heading h1 { font-size: 25px; }
   .stats-grid { grid-template-columns: 1fr; }
+  .merchant-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .comparison-grid { grid-template-columns: 1fr; }
   .detail-content { padding: 20px; }
   .detail-content h1 { font-size: 25px; }
   .form-footer { align-items: stretch; flex-direction: column; }
