@@ -1,0 +1,10 @@
+.form-field { min-width: 0; }
+.form-field label { display: block; color: #40516a; font-size: 13px; font-weight: 700; margin-bottom: 7px; }
+.form-field input,.form-field select,.form-field textarea,.filter-panel input,.filter-panel select {
+  display: block; width: 100%; min-height: 44px; padding: 10px 12px; border: 1px solid #dce4ef;
+  border-radius: 9px; outline: none; color: #213550; background: white; transition: border-color .15s,box-shadow .15s;
+}
+.form-field textarea { min-height: 105px; resize: vertical; }
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus,.filter-panel input:focus,.filter-panel select:focus { border-color: #7ca4f7; box-shadow: 0 0 0 3px rgba(37,99,235,.1); }
+.form-field input::placeholder,.form-field textarea::placeholder,.filter-panel input::placeholder { color: #a0aabb; }
+.form-error { color: #b83e49; font-size: 12px; margin-top: 5px; }

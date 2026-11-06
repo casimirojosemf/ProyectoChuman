@@ -1,0 +1,38 @@
+@media (max-width: 1050px) {
+  .business-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .filter-panel { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .topbar { height: 64px; padding: 0 18px; }
+  .app-main { min-height: calc(100vh - 64px); }
+  .welcome { padding: 52px 18px; }
+  .hero { margin-bottom: 36px; }
+  .hero h1 { letter-spacing: -1.6px; }
+  .hero p { font-size: 16px; }
+  .profile-grid { grid-template-columns: 1fr; gap: 16px; }
+  .profile-card { min-height: auto; padding: 25px; }
+  .workspace { display: block; min-height: calc(100vh - 64px); }
+  .sidebar { position: sticky; top: 64px; z-index: 4; padding: 8px 12px; border-right: 0; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  .sidebar-label { display: none; }
+  .side-menu { display: flex; width: max-content; gap: 4px; }
+  .side-link { white-space: nowrap; padding: 10px 11px; font-size: 13px; }
+  .side-link .side-icon { width: auto; }
+  .side-link.logout { margin: 0; }
+  .workspace-content { padding: 25px 17px 45px; }
+  .stats-grid { gap: 10px; }
+  .stat-card { padding: 15px; }
+  .stat-card strong { font-size: 24px; }
+}
+@media (max-width: 560px) {
+  .topbar-actions .button { min-height: 36px; padding: 8px 10px; font-size: 12px; }
+  .business-grid { grid-template-columns: 1fr; }
+  .filter-panel { grid-template-columns: 1fr; padding: 13px; }
+  .form-grid,.detail-grid { grid-template-columns: 1fr; }
+  .form-field.full { grid-column: auto; }
+  .page-heading { align-items: flex-start; flex-direction: column; }
+  .page-heading h1 { font-size: 25px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .detail-content { padding: 20px; }
+  .detail-content h1 { font-size: 25px; }
+  .form-footer { align-items: stretch; flex-direction: column; }
+}
